@@ -3,17 +3,11 @@ import { NavLink } from 'react-router-dom'
 
 export default function Menu() {
   const pendingClass = (evt) => {
-    console.log(evt)
-    const {isActive, isPending} = evt
-    console.log(isActive)
+    const {isActive} = evt
     if (isActive) {
-      // console.log(active)
+      return 'menu__item menu__item-active'
+    }
       return "menu__item"
-    }
-    
-    if (isPending) {
-      return 'menu__item-active'
-    }
   }
 
   return (<nav>
